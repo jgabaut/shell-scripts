@@ -1,0 +1,11 @@
+[Unit]
+Description=Logs the process with most CPU usage
+Documentation=
+Requires=mylog.service
+After=mylog.service
+[Service]
+ExecStart=usr/bin/usage_logger.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
